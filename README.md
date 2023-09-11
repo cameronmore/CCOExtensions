@@ -1,5 +1,5 @@
-# CCO_Extensions
-Extension Modules from the Common Core Ontologies
+# CCO Extensions
+Extension Modules from the Common Core Ontologies, created by Cameron More, unless otherwise stated, and openly free to use by anybody for anything.
 
 ## Vehicle Manufacturing Extension
 
