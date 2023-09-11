@@ -1,13 +1,13 @@
-@prefix : <http://www.CommonCoreExtension.org/VehiclesAndManufacturers/> .
+@prefix ccx: <http://www.CommonCoreExtension.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.CommonCoreExtension.org/VehiclesAndManufacturers/> .
+@base <http://www.CommonCoreExtension.org/> .
 
-<http://www.CommonCoreExtension.org/VehiclesAndManufacturers/> rdf:type owl:Ontology ;
-                                                                owl:versionIRI <http://www.CommonCoreExtension.org/VehiclesAndManufacturers/0.0.1> ;
+<http://www.CommonCoreExtension.org/> rdf:type owl:Ontology ;
+                                                                owl:versionIRI <http://www.CommonCoreExtension.org/0.0.1> ;
                                                                 owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2023-04-07/MergedAllCoreOntology> ;
                                                                 rdfs:comment "This ontology extends from the Common Core Ontologies and provides terms for vehicle manufacturers and model specifications."@en .
 
@@ -15,21 +15,21 @@
 #    Classes
 #################################################################
 
-###  http://www.CommonCoreExtension.org/VehiclesAndManufacturers/ArtifactModelYear
-:ArtifactModelYear rdf:type owl:Class ;
+###  http://www.CommonCoreExtension.org/ArtifactModelYear
+ccx:ArtifactModelYear rdf:type owl:Class ;
                    rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeInformationContentEntity> ;
                    <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "The year used to designate a discrete vehicle model, irrespective of the calendar year in which the vehicle was actually produced, so long as the actual period is less than two calendar years."@en ;
                    <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "National Highway Transportation Safety Administration (NHTSA)." ;
                    rdfs:label "Artifact Model Year" .
 
 
-###  http://www.CommonCoreExtension.org/VehiclesAndManufacturers/HondaAccord
-:HondaAccord rdf:type owl:Class ;
+###  http://www.CommonCoreExtension.org/HondaAccord
+ccx:HondaAccord rdf:type owl:Class ;
              rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactModel> .
 
 
-###  http://www.CommonCoreExtension.org/VehiclesAndManufacturers/Manufacturer
-:Manufacturer rdf:type owl:Class ;
+###  http://www.CommonCoreExtension.org/Manufacturer
+ccx:Manufacturer rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/Organization>
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/agent_in> ;
@@ -46,27 +46,27 @@
 #    Individuals
 #################################################################
 
-###  http://www.CommonCoreExtension.org/VehiclesAndManufacturers/FordMotorCompany
-:FordMotorCompany rdf:type owl:NamedIndividual .
+###  http://www.CommonCoreExtension.org/FordMotorCompany
+ccx:FordMotorCompany rdf:type owl:NamedIndividual .
 
 
-###  http://www.CommonCoreExtension.org/VehiclesAndManufacturers/GeneralMotors
-:GeneralMotors rdf:type owl:NamedIndividual ;
+###  http://www.CommonCoreExtension.org/GeneralMotors
+ccx:GeneralMotors rdf:type owl:NamedIndividual ;
                rdfs:label "General Motors" .
 
 
-###  http://www.CommonCoreExtension.org/VehiclesAndManufacturers/HondaMotorCompany
-:HondaMotorCompany rdf:type owl:NamedIndividual ;
+###  http://www.CommonCoreExtension.org/HondaMotorCompany
+ccx:HondaMotorCompany rdf:type owl:NamedIndividual ;
                    rdfs:label "Honda" .
 
 
-###  http://www.CommonCoreExtension.org/VehiclesAndManufacturers/HyundaiMotorCompany
-:HyundaiMotorCompany rdf:type owl:NamedIndividual ;
+###  http://www.CommonCoreExtension.org/HyundaiMotorCompany
+ccx:HyundaiMotorCompany rdf:type owl:NamedIndividual ;
                      rdfs:label "Hyundai" .
 
 
-###  http://www.CommonCoreExtension.org/VehiclesAndManufacturers/MitsubishiMotors
-:MitsubishiMotors rdf:type owl:NamedIndividual ;
+###  http://www.CommonCoreExtension.org/MitsubishiMotors
+ccx:MitsubishiMotors rdf:type owl:NamedIndividual ;
                   rdfs:label "Mitsubishi" .
 
 
