@@ -65,7 +65,8 @@ ccx:VEH_00000001 rdf:type owl:Class ;
                                        rdf:type owl:Class
                                      ] ;
                  rdfs:subClassOf cco:Organization ;
-                 cco:definition "An Organization that is the agent in some Act of Artifact Processing which may hold the right to manufacture some Artifact according to an Artifact Model."@en .
+                 cco:definition "An Organization that is the agent in some Act of Artifact Processing which may hold the right to manufacture some Artifact according to an Artifact Model."@en ;
+                 rdfs:label "Manufacturer"@en .
 
 
 ###  http://www.CommonCoreExtension.org/VEH_00000002
@@ -98,10 +99,12 @@ ccx:ProductionAct1 rdf:type owl:NamedIndividual ,
                    cco:has_input ccx:Civic ;
                    cco:has_output ccx:Car1 .
 
+
 ###  http://www.CommonCoreExtension.org/VEH_00000003
 ccx:VEH_00000003 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Alfa Romero" .
+
 
 ###  http://www.CommonCoreExtension.org/VEH_00000004
 ccx:VEH_00000004 rdf:type owl:NamedIndividual ,
