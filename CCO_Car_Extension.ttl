@@ -14,14 +14,6 @@
                                        rdfs:comment "This ontology extends from the Common Core Ontologies and provides terms for vehicle manufacturers and model specifications."@en .
 
 #################################################################
-#    Annotation properties
-#################################################################
-
-###  http://www.CommonCoreExtension.org/ManufacturedBy
-ccx:ManufacturedBy rdf:type owl:AnnotationProperty .
-
-
-#################################################################
 #    Object Properties
 #################################################################
 
@@ -57,6 +49,11 @@ ccx:ArtifactModelYear rdf:type owl:Class ;
                       rdfs:label "Artifact Model Year" .
 
 
+###  http://www.CommonCoreExtension.org/CivicCars
+ccx:CivicCars rdf:type owl:Class ;
+              rdfs:subClassOf cco:GroundMotorVehicle .
+
+
 ###  http://www.CommonCoreExtension.org/VEH_00000001
 ccx:VEH_00000001 rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( cco:Organization
@@ -80,6 +77,31 @@ ccx:VEH_00000002 rdf:type owl:Class ;
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.CommonCoreExtension.org/Car1
+ccx:Car1 rdf:type owl:NamedIndividual ,
+                  cco:Automobile ;
+         cco:is_output_of ccx:ProductionAct1 ;
+         ccx:VEH_00000069 1998 .
+
+
+###  http://www.CommonCoreExtension.org/Civic
+ccx:Civic rdf:type owl:NamedIndividual ,
+                   ccx:VEH_00000002 ;
+          rdfs:label "Civic Artifact Model" .
+
+
+###  http://www.CommonCoreExtension.org/ProductionAct1
+ccx:ProductionAct1 rdf:type owl:NamedIndividual ,
+                            cco:ActOfManufacturing ;
+                   cco:has_agent ccx:VEH_00000023 ;
+                   cco:has_input ccx:Civic ;
+                   cco:has_output ccx:Car1 .
+
+###  http://www.CommonCoreExtension.org/VEH_00000003
+ccx:VEH_00000003 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Alfa Romero" .
 
 ###  http://www.CommonCoreExtension.org/VEH_00000004
 ccx:VEH_00000004 rdf:type owl:NamedIndividual ,
@@ -200,6 +222,7 @@ ccx:VEH_00000022 rdf:type owl:NamedIndividual ,
 ###  http://www.CommonCoreExtension.org/VEH_00000023
 ccx:VEH_00000023 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
+                 cco:agent_in ccx:ProductionAct1 ;
                  rdfs:label "Honda" .
 
 
