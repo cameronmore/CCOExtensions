@@ -1,6 +1,8 @@
 @prefix : <http://www.CommonCoreExtension.org/> .
 @prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix ccx: <http://www.CommonCoreExtension.org/> .
+@prefix obi: <http://purl.obolibrary.org/obo/obi.owl#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -16,6 +18,42 @@
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://purl.obolibrary.org/obo/OBI_0000293
+obo:OBI_0000293 rdf:type owl:ObjectProperty ;
+                owl:equivalentProperty [ owl:inverseOf obo:OBI_0000295
+                                       ] ;
+                rdfs:subPropertyOf obo:RO_0000057 ;
+                owl:inverseOf obo:OBI_0000295 ;
+                rdfs:domain cco:IntentionalAct ;
+                obo:IAO_0000111 "has_specified_input"@en ,
+                                "has_specified_input" ;
+                obo:IAO_0000112 "see is_input_of example_of_usage"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "The inverse property of is_specified_input_of"@en ;
+                obo:IAO_0000116 "8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how 'has participant' works." ;
+                obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
+                                "PERSON: Bjoern Peters" ,
+                                "PERSON: Larry Hunter" ,
+                                "PERSON: Melanie Coutot" ;
+                obo:IAO_0000412 obo:obi.owl ;
+                rdfs:comment "Imported from Ontology of Biomedical Investigations, changed the semantics of domain from 'obi:PlannedProcess' to 'cco:PlannedAct', 9-14-2023."@en ;
+                rdfs:label "has_specified_input"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000295
+obo:OBI_0000295 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:RO_0000056 ;
+                rdfs:range cco:IntentionalAct ;
+                obo:IAO_0000111 "is_specified_input_of" ;
+                obo:IAO_0000112 "some Autologous EBV(Epstein-Barr virus)-transformed B-LCL (B lymphocyte cell line) is_input_for instance of Chromum Release Assay described at https://wiki.cbil.upenn.edu/obiwiki/index.php/Chromium_Release_assay"@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of."@en ;
+                obo:IAO_0000117 "Alan Ruttenberg"@en ,
+                                "PERSON:Bjoern Peters" ;
+                rdfs:comment "Imported from Ontology of Biomedical Investigations, changed the semantics of range from 'obi:PlannedProcess' to 'cco:PlannedAct', 9-14-2023."@en ;
+                rdfs:label "is_specified_input_of"@en .
+
 
 ###  http://www.CommonCoreExtension.org/VEH_00000067
 ccx:VEH_00000067 rdf:type owl:ObjectProperty ;
