@@ -147,8 +147,7 @@ ccx:VEH_00000003 rdf:type owl:NamedIndividual ,
 ###  http://www.CommonCoreExtension.org/VEH_00000004
 ccx:VEH_00000004 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
-                 rdfs:label "Acura" ,
-                            "Alfa Romero" .
+                 rdfs:label "Acura" .
 
 
 ###  http://www.CommonCoreExtension.org/VEH_00000005
