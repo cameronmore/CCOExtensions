@@ -1,5 +1,5 @@
 # CCO Extensions
-Extension Modules from the Common Core Ontologies, created by Cameron More, and openly free to use by anybody for anything.
+Extension Modules from the Common Core Ontologies, curated by Cameron More and other NCOR ontologists, and openly free to use by anybody for anything.
 
 ## CCO_MFR_Extension (Vehicle Manufacturing Extension)
 
