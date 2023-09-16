@@ -55,14 +55,14 @@ obo:OBI_0000295 rdf:type owl:ObjectProperty ;
                 rdfs:label "is_specified_input_of"@en .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000067
-ccx:VEH_00000067 rdf:type owl:ObjectProperty ;
-                 owl:inverseOf ccx:VEH_00000068 ;
+###  http://www.CommonCoreExtension.org/MFR_00000067
+ccx:MFR_00000067 rdf:type owl:ObjectProperty ;
+                 owl:inverseOf ccx:MFR_00000068 ;
                  rdfs:label "manufactured" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000068
-ccx:VEH_00000068 rdf:type owl:ObjectProperty ;
+###  http://www.CommonCoreExtension.org/MFR_00000068
+ccx:MFR_00000068 rdf:type owl:ObjectProperty ;
                  rdfs:label "manufactured by" .
 
 
@@ -70,8 +70,8 @@ ccx:VEH_00000068 rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://www.CommonCoreExtension.org/VEH_00000069
-ccx:VEH_00000069 rdf:type owl:DatatypeProperty ;
+###  http://www.CommonCoreExtension.org/MFR_00000069
+ccx:MFR_00000069 rdf:type owl:DatatypeProperty ;
                  rdfs:label "has Artifact Model Year" .
 
 
@@ -92,8 +92,8 @@ ccx:CivicCars rdf:type owl:Class ;
               rdfs:subClassOf cco:GroundMotorVehicle .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000001
-ccx:VEH_00000001 rdf:type owl:Class ;
+###  http://www.CommonCoreExtension.org/MFR_00000001
+ccx:MFR_00000001 rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( cco:Organization
                                                             [ rdf:type owl:Restriction ;
                                                               owl:onProperty cco:agent_in ;
@@ -107,8 +107,8 @@ ccx:VEH_00000001 rdf:type owl:Class ;
                  rdfs:label "Manufacturer"@en .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000002
-ccx:VEH_00000002 rdf:type owl:Class ;
+###  http://www.CommonCoreExtension.org/MFR_00000002
+ccx:MFR_00000002 rdf:type owl:Class ;
                  rdfs:subClassOf cco:ArtifactModel ;
                  rdfs:label "Vehicle Artifact Model" .
 
@@ -121,420 +121,420 @@ ccx:VEH_00000002 rdf:type owl:Class ;
 ccx:Car1 rdf:type owl:NamedIndividual ,
                   cco:Automobile ;
          cco:is_output_of ccx:ProductionAct1 ;
-         ccx:VEH_00000069 1998 .
+         ccx:MFR_00000069 1998 .
 
 
 ###  http://www.CommonCoreExtension.org/Civic
 ccx:Civic rdf:type owl:NamedIndividual ,
-                   ccx:VEH_00000002 ;
+                   ccx:MFR_00000002 ;
           rdfs:label "Civic Artifact Model" .
 
 
 ###  http://www.CommonCoreExtension.org/ProductionAct1
 ccx:ProductionAct1 rdf:type owl:NamedIndividual ,
                             cco:ActOfManufacturing ;
-                   cco:has_agent ccx:VEH_00000023 ;
+                   cco:has_agent ccx:MFR_00000023 ;
                    cco:has_input ccx:Civic ;
                    cco:has_output ccx:Car1 .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000003
-ccx:VEH_00000003 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000003
+ccx:MFR_00000003 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Alfa Romero" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000004
-ccx:VEH_00000004 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000004
+ccx:MFR_00000004 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Acura" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000005
-ccx:VEH_00000005 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000005
+ccx:MFR_00000005 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Aston Martin" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000006
-ccx:VEH_00000006 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000006
+ccx:MFR_00000006 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Audi" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000007
-ccx:VEH_00000007 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000007
+ccx:MFR_00000007 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "BMW" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000008
-ccx:VEH_00000008 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000008
+ccx:MFR_00000008 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Bentley" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000009
-ccx:VEH_00000009 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000009
+ccx:MFR_00000009 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Bollinger" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000010
-ccx:VEH_00000010 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000010
+ccx:MFR_00000010 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Buggati" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000011
-ccx:VEH_00000011 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000011
+ccx:MFR_00000011 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Buick" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000012
-ccx:VEH_00000012 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000012
+ccx:MFR_00000012 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Cadillac" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000013
-ccx:VEH_00000013 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000013
+ccx:MFR_00000013 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Canoo" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000014
-ccx:VEH_00000014 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000014
+ccx:MFR_00000014 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Chevrolet" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000015
-ccx:VEH_00000015 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000015
+ccx:MFR_00000015 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Chrysler" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000016
-ccx:VEH_00000016 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000016
+ccx:MFR_00000016 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Delorean" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000017
-ccx:VEH_00000017 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000017
+ccx:MFR_00000017 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Dodge" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000018
-ccx:VEH_00000018 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000018
+ccx:MFR_00000018 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Ferrari" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000019
-ccx:VEH_00000019 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000019
+ccx:MFR_00000019 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Fiat" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000020
-ccx:VEH_00000020 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000020
+ccx:MFR_00000020 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Ford" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000021
-ccx:VEH_00000021 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000021
+ccx:MFR_00000021 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  cco:alternative_label "GMC" ;
                  rdfs:label "General Motors" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000022
-ccx:VEH_00000022 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000022
+ccx:MFR_00000022 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Genesis" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000023
-ccx:VEH_00000023 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000023
+ccx:MFR_00000023 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  cco:agent_in ccx:ProductionAct1 ;
                  rdfs:label "Honda" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000024
-ccx:VEH_00000024 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000024
+ccx:MFR_00000024 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Hummer" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000025
-ccx:VEH_00000025 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000025
+ccx:MFR_00000025 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Hyundai" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000026
-ccx:VEH_00000026 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000026
+ccx:MFR_00000026 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Ineos" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000027
-ccx:VEH_00000027 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000027
+ccx:MFR_00000027 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Infiniti" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000028
-ccx:VEH_00000028 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000028
+ccx:MFR_00000028 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Jaguar" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000029
-ccx:VEH_00000029 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000029
+ccx:MFR_00000029 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Jeep" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000030
-ccx:VEH_00000030 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000030
+ccx:MFR_00000030 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Karma" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000031
-ccx:VEH_00000031 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000031
+ccx:MFR_00000031 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Kia" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000032
-ccx:VEH_00000032 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000032
+ccx:MFR_00000032 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Lamborghini" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000033
-ccx:VEH_00000033 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000033
+ccx:MFR_00000033 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Land Rover" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000034
-ccx:VEH_00000034 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000034
+ccx:MFR_00000034 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Lexus" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000035
-ccx:VEH_00000035 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000035
+ccx:MFR_00000035 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Lincoln" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000036
-ccx:VEH_00000036 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000036
+ccx:MFR_00000036 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Lordstown Motors" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000037
-ccx:VEH_00000037 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000037
+ccx:MFR_00000037 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Lotus" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000038
-ccx:VEH_00000038 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000038
+ccx:MFR_00000038 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Lucid" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000039
-ccx:VEH_00000039 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000039
+ccx:MFR_00000039 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Maserati" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000040
-ccx:VEH_00000040 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000040
+ccx:MFR_00000040 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Maybach" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000041
-ccx:VEH_00000041 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000041
+ccx:MFR_00000041 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Mazda" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000042
-ccx:VEH_00000042 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000042
+ccx:MFR_00000042 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "McLaren" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000043
-ccx:VEH_00000043 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000043
+ccx:MFR_00000043 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Mercedes-Benz" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000044
-ccx:VEH_00000044 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000044
+ccx:MFR_00000044 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Mercury" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000045
-ccx:VEH_00000045 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000045
+ccx:MFR_00000045 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Mini" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000046
-ccx:VEH_00000046 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000046
+ccx:MFR_00000046 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Mitsubishi" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000047
-ccx:VEH_00000047 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000047
+ccx:MFR_00000047 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Nissan" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000048
-ccx:VEH_00000048 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000048
+ccx:MFR_00000048 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Oldsmobile" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000049
-ccx:VEH_00000049 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000049
+ccx:MFR_00000049 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Plymouth" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000050
-ccx:VEH_00000050 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000050
+ccx:MFR_00000050 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Polestar" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000051
-ccx:VEH_00000051 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000051
+ccx:MFR_00000051 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Pontiac" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000052
-ccx:VEH_00000052 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000052
+ccx:MFR_00000052 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Porsche" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000053
-ccx:VEH_00000053 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000053
+ccx:MFR_00000053 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Ram" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000054
-ccx:VEH_00000054 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000054
+ccx:MFR_00000054 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Rivian" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000055
-ccx:VEH_00000055 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000055
+ccx:MFR_00000055 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Rolls-Royce" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000056
-ccx:VEH_00000056 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000056
+ccx:MFR_00000056 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Saab" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000057
-ccx:VEH_00000057 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000057
+ccx:MFR_00000057 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Saturn" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000058
-ccx:VEH_00000058 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000058
+ccx:MFR_00000058 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Scion" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000059
-ccx:VEH_00000059 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000059
+ccx:MFR_00000059 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Smart" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000060
-ccx:VEH_00000060 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000060
+ccx:MFR_00000060 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Subaru" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000061
-ccx:VEH_00000061 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000061
+ccx:MFR_00000061 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Suzuki" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000062
-ccx:VEH_00000062 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000062
+ccx:MFR_00000062 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Tesla" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000063
-ccx:VEH_00000063 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000063
+ccx:MFR_00000063 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Toyota" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000064
-ccx:VEH_00000064 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000064
+ccx:MFR_00000064 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "VinFast" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000065
-ccx:VEH_00000065 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000065
+ccx:MFR_00000065 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Volkswagen" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000066
-ccx:VEH_00000066 rdf:type owl:NamedIndividual ,
+###  http://www.CommonCoreExtension.org/MFR_00000066
+ccx:MFR_00000066 rdf:type owl:NamedIndividual ,
                           cco:IncorporatedOrganization ;
                  rdfs:label "Volvo" .
 
 
-###  http://www.CommonCoreExtension.org/VEH_00000070
-ccx:VEH_00000070 rdf:type owl:NamedIndividual ,
-                          ccx:VEH_00000002 ;
+###  http://www.CommonCoreExtension.org/MFR_00000070
+ccx:MFR_00000070 rdf:type owl:NamedIndividual ,
+                          ccx:MFR_00000002 ;
                  rdfs:label "Honda Accord Artifact Model" .
 
 
 ###  http://www.CommonCoreExtension.org/car
 ccx:car rdf:type owl:NamedIndividual ,
                  cco:Automobile ;
-        ccx:VEH_00000068 ccx:VEH_00000023 ;
-        ccx:VEH_00000069 1998 .
+        ccx:MFR_00000068 ccx:MFR_00000023 ;
+        ccx:MFR_00000069 1998 .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
