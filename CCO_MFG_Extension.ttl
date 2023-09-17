@@ -113,6 +113,28 @@ ccx:MFG_00000002 rdf:type owl:Class ;
                  rdfs:label "Vehicle Artifact Model" .
 
 
+###  http://www.CommonCoreExtension.org/MFG_00000071
+ccx:MFG_00000071 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ActOfFinancialInstrumentUse ;
+                 cco:definition "An Act Financial Instrument Use where an Agent (Seller) uses some Financial Instrument to transfer ownership of a good to another Agent (the Buyer)."@en ;
+                 rdfs:label "Act of Selling"@en .
+
+
+###  http://www.CommonCoreExtension.org/MFG_00000072
+ccx:MFG_00000072 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000040
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty cco:is_input_of ;
+                                                              owl:someValuesFrom cco:ActOfArtifactProcessing
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf obo:BFO_0000040 ;
+                 cco:definition "A Material Entity which is the input of some Act of Artifact Processing."@en ;
+                 rdfs:label "Raw Material"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -128,14 +150,6 @@ ccx:Car1 rdf:type owl:NamedIndividual ,
 ccx:Civic rdf:type owl:NamedIndividual ,
                    ccx:MFG_00000002 ;
           rdfs:label "Civic Artifact Model" .
-
-
-###  http://www.CommonCoreExtension.org/ProductionAct1
-ccx:ProductionAct1 rdf:type owl:NamedIndividual ,
-                            cco:ActOfManufacturing ;
-                   cco:has_agent ccx:MFG_00000023 ;
-                   cco:has_input ccx:Civic ;
-                   cco:has_output ccx:Car1 .
 
 
 ###  http://www.CommonCoreExtension.org/MFG_00000003
@@ -528,6 +542,14 @@ ccx:MFG_00000066 rdf:type owl:NamedIndividual ,
 ccx:MFG_00000070 rdf:type owl:NamedIndividual ,
                           ccx:MFG_00000002 ;
                  rdfs:label "Honda Accord Artifact Model" .
+
+
+###  http://www.CommonCoreExtension.org/ProductionAct1
+ccx:ProductionAct1 rdf:type owl:NamedIndividual ,
+                            cco:ActOfManufacturing ;
+                   cco:has_agent ccx:MFG_00000023 ;
+                   cco:has_input ccx:Civic ;
+                   cco:has_output ccx:Car1 .
 
 
 ###  http://www.CommonCoreExtension.org/car
