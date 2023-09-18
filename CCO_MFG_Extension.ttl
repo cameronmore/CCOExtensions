@@ -1,6 +1,6 @@
 @prefix : <http://www.CommonCoreExtension.org/> .
 @prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
-@prefix ccx: <http://www.CommonCoreExtension.org/> .
+@prefix ccx: <http://www.CommonCoreExtension.org/ontologies/CoreExtension/> .
 @prefix obi: <http://purl.obolibrary.org/obo/obi.owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -56,14 +56,14 @@ obo:OBI_0000295 rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000067
-:MFG_00000067 rdf:type owl:ObjectProperty ;
-              owl:inverseOf :MFG_00000068 ;
-              rdfs:label "manufactured" .
+ccx:MFG_00000067 rdf:type owl:ObjectProperty ;
+                 owl:inverseOf ccx:MFG_00000068 ;
+                 rdfs:label "manufactured" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000068
-:MFG_00000068 rdf:type owl:ObjectProperty ;
-              rdfs:label "manufactured by" .
+ccx:MFG_00000068 rdf:type owl:ObjectProperty ;
+                 rdfs:label "manufactured by" .
 
 
 #################################################################
@@ -71,8 +71,8 @@ obo:OBI_0000295 rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000069
-:MFG_00000069 rdf:type owl:DatatypeProperty ;
-              rdfs:label "has Artifact Model Year" .
+ccx:MFG_00000069 rdf:type owl:DatatypeProperty ;
+                 rdfs:label "has Artifact Model Year" .
 
 
 #################################################################
@@ -80,59 +80,59 @@ obo:OBI_0000295 rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/ArtifactModelYear
-:ArtifactModelYear rdf:type owl:Class ;
-                   rdfs:subClassOf cco:DesignativeInformationContentEntity ;
-                   cco:definition "The year used to designate a discrete vehicle model, irrespective of the calendar year in which the vehicle was actually produced, so long as the actual period is less than two calendar years."@en ;
-                   cco:definition_source "National Highway Transportation Safety Administration (NHTSA)." ;
-                   rdfs:label "Artifact Model Year" .
+ccx:ArtifactModelYear rdf:type owl:Class ;
+                      rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+                      cco:definition "The year used to designate a discrete vehicle model, irrespective of the calendar year in which the vehicle was actually produced, so long as the actual period is less than two calendar years."@en ;
+                      cco:definition_source "National Highway Transportation Safety Administration (NHTSA)." ;
+                      rdfs:label "Artifact Model Year" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/CivicCars
-:CivicCars rdf:type owl:Class ;
-           rdfs:subClassOf cco:GroundMotorVehicle .
+ccx:CivicCars rdf:type owl:Class ;
+              rdfs:subClassOf cco:GroundMotorVehicle .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000001
-:MFG_00000001 rdf:type owl:Class ;
-              owl:equivalentClass [ owl:intersectionOf ( cco:Organization
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty cco:agent_in ;
-                                                           owl:someValuesFrom cco:ActOfArtifactProcessing
-                                                         ]
-                                                       ) ;
-                                    rdf:type owl:Class
-                                  ] ;
-              rdfs:subClassOf cco:Organization ;
-              cco:definition "An Organization that is the agent in some Act of Artifact Processing which may hold the right to manufacture some Artifact according to an Artifact Model."@en ;
-              rdfs:label "Manufacturer"@en .
+ccx:MFG_00000001 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( cco:Organization
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty cco:agent_in ;
+                                                              owl:someValuesFrom cco:ActOfArtifactProcessing
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf cco:Organization ;
+                 cco:definition "An Organization that is the agent in some Act of Artifact Processing which may hold the right to manufacture some Artifact according to an Artifact Model."@en ;
+                 rdfs:label "Manufacturer"@en .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000002
-:MFG_00000002 rdf:type owl:Class ;
-              rdfs:subClassOf cco:ArtifactModel ;
-              rdfs:label "Vehicle Artifact Model" .
+ccx:MFG_00000002 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ArtifactModel ;
+                 rdfs:label "Vehicle Artifact Model" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000071
-:MFG_00000071 rdf:type owl:Class ;
-              rdfs:subClassOf cco:ActOfFinancialInstrumentUse ;
-              cco:definition "An Act Financial Instrument Use where an Agent (Seller) uses some Financial Instrument to transfer ownership of a good to another Agent (the Buyer)."@en ;
-              rdfs:label "Act of Selling"@en .
+ccx:MFG_00000071 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ActOfFinancialInstrumentUse ;
+                 cco:definition "An Act Financial Instrument Use where an Agent (Seller) uses some Financial Instrument to transfer ownership of a good to another Agent (the Buyer)."@en ;
+                 rdfs:label "Act of Selling"@en .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000072
-:MFG_00000072 rdf:type owl:Class ;
-              owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000040
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty cco:is_input_of ;
-                                                           owl:someValuesFrom cco:ActOfArtifactProcessing
-                                                         ]
-                                                       ) ;
-                                    rdf:type owl:Class
-                                  ] ;
-              rdfs:subClassOf obo:BFO_0000040 ;
-              cco:definition "A Material Entity which is the input of some Act of Artifact Processing."@en ;
-              rdfs:label "Raw Material"@en .
+ccx:MFG_00000072 rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000040
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty cco:is_input_of ;
+                                                              owl:someValuesFrom cco:ActOfArtifactProcessing
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf obo:BFO_0000040 ;
+                 cco:definition "A Material Entity which is the input of some Act of Artifact Processing."@en ;
+                 rdfs:label "Raw Material"@en .
 
 
 #################################################################
@@ -140,423 +140,423 @@ obo:OBI_0000295 rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/Car1
-:Car1 rdf:type owl:NamedIndividual ,
-               cco:Automobile ;
-      cco:is_output_of :ProductionAct1 ;
-      :MFG_00000069 1998 .
+ccx:Car1 rdf:type owl:NamedIndividual ,
+                  cco:Automobile ;
+         cco:is_output_of ccx:ProductionAct1 ;
+         ccx:MFG_00000069 1998 .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/Civic
-:Civic rdf:type owl:NamedIndividual ,
-                :MFG_00000002 ;
-       rdfs:label "Civic Artifact Model" .
+ccx:Civic rdf:type owl:NamedIndividual ,
+                   ccx:MFG_00000002 ;
+          rdfs:label "Civic Artifact Model" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000003
-:MFG_00000003 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Alfa Romero" .
+ccx:MFG_00000003 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Alfa Romero" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000004
-:MFG_00000004 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Acura" .
+ccx:MFG_00000004 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Acura" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000005
-:MFG_00000005 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Aston Martin" .
+ccx:MFG_00000005 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Aston Martin" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000006
-:MFG_00000006 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Audi" .
+ccx:MFG_00000006 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Audi" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000007
-:MFG_00000007 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "BMW" .
+ccx:MFG_00000007 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "BMW" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000008
-:MFG_00000008 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Bentley" .
+ccx:MFG_00000008 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Bentley" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000009
-:MFG_00000009 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Bollinger" .
+ccx:MFG_00000009 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Bollinger" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000010
-:MFG_00000010 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Buggati" .
+ccx:MFG_00000010 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Buggati" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000011
-:MFG_00000011 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Buick" .
+ccx:MFG_00000011 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Buick" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000012
-:MFG_00000012 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Cadillac" .
+ccx:MFG_00000012 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Cadillac" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000013
-:MFG_00000013 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Canoo" .
+ccx:MFG_00000013 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Canoo" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000014
-:MFG_00000014 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Chevrolet" .
+ccx:MFG_00000014 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Chevrolet" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000015
-:MFG_00000015 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Chrysler" .
+ccx:MFG_00000015 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Chrysler" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000016
-:MFG_00000016 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Delorean" .
+ccx:MFG_00000016 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Delorean" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000017
-:MFG_00000017 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Dodge" .
+ccx:MFG_00000017 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Dodge" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000018
-:MFG_00000018 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Ferrari" .
+ccx:MFG_00000018 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Ferrari" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000019
-:MFG_00000019 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Fiat" .
+ccx:MFG_00000019 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Fiat" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000020
-:MFG_00000020 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Ford" .
+ccx:MFG_00000020 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Ford" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000021
-:MFG_00000021 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              cco:alternative_label "GMC" ;
-              rdfs:label "General Motors" .
+ccx:MFG_00000021 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 cco:alternative_label "GMC" ;
+                 rdfs:label "General Motors" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000022
-:MFG_00000022 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Genesis" .
+ccx:MFG_00000022 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Genesis" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000023
-:MFG_00000023 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              cco:agent_in :ProductionAct1 ;
-              rdfs:label "Honda" .
+ccx:MFG_00000023 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 cco:agent_in ccx:ProductionAct1 ;
+                 rdfs:label "Honda" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000024
-:MFG_00000024 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Hummer" .
+ccx:MFG_00000024 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Hummer" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000025
-:MFG_00000025 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Hyundai" .
+ccx:MFG_00000025 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Hyundai" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000026
-:MFG_00000026 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Ineos" .
+ccx:MFG_00000026 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Ineos" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000027
-:MFG_00000027 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Infiniti" .
+ccx:MFG_00000027 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Infiniti" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000028
-:MFG_00000028 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Jaguar" .
+ccx:MFG_00000028 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Jaguar" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000029
-:MFG_00000029 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Jeep" .
+ccx:MFG_00000029 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Jeep" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000030
-:MFG_00000030 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Karma" .
+ccx:MFG_00000030 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Karma" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000031
-:MFG_00000031 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Kia" .
+ccx:MFG_00000031 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Kia" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000032
-:MFG_00000032 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Lamborghini" .
+ccx:MFG_00000032 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Lamborghini" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000033
-:MFG_00000033 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Land Rover" .
+ccx:MFG_00000033 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Land Rover" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000034
-:MFG_00000034 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Lexus" .
+ccx:MFG_00000034 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Lexus" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000035
-:MFG_00000035 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Lincoln" .
+ccx:MFG_00000035 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Lincoln" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000036
-:MFG_00000036 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Lordstown Motors" .
+ccx:MFG_00000036 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Lordstown Motors" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000037
-:MFG_00000037 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Lotus" .
+ccx:MFG_00000037 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Lotus" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000038
-:MFG_00000038 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Lucid" .
+ccx:MFG_00000038 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Lucid" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000039
-:MFG_00000039 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Maserati" .
+ccx:MFG_00000039 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Maserati" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000040
-:MFG_00000040 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Maybach" .
+ccx:MFG_00000040 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Maybach" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000041
-:MFG_00000041 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Mazda" .
+ccx:MFG_00000041 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Mazda" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000042
-:MFG_00000042 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "McLaren" .
+ccx:MFG_00000042 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "McLaren" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000043
-:MFG_00000043 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Mercedes-Benz" .
+ccx:MFG_00000043 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Mercedes-Benz" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000044
-:MFG_00000044 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Mercury" .
+ccx:MFG_00000044 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Mercury" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000045
-:MFG_00000045 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Mini" .
+ccx:MFG_00000045 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Mini" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000046
-:MFG_00000046 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Mitsubishi" .
+ccx:MFG_00000046 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Mitsubishi" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000047
-:MFG_00000047 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Nissan" .
+ccx:MFG_00000047 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Nissan" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000048
-:MFG_00000048 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Oldsmobile" .
+ccx:MFG_00000048 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Oldsmobile" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000049
-:MFG_00000049 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Plymouth" .
+ccx:MFG_00000049 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Plymouth" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000050
-:MFG_00000050 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Polestar" .
+ccx:MFG_00000050 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Polestar" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000051
-:MFG_00000051 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Pontiac" .
+ccx:MFG_00000051 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Pontiac" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000052
-:MFG_00000052 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Porsche" .
+ccx:MFG_00000052 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Porsche" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000053
-:MFG_00000053 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Ram" .
+ccx:MFG_00000053 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Ram" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000054
-:MFG_00000054 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Rivian" .
+ccx:MFG_00000054 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Rivian" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000055
-:MFG_00000055 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Rolls-Royce" .
+ccx:MFG_00000055 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Rolls-Royce" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000056
-:MFG_00000056 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Saab" .
+ccx:MFG_00000056 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Saab" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000057
-:MFG_00000057 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Saturn" .
+ccx:MFG_00000057 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Saturn" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000058
-:MFG_00000058 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Scion" .
+ccx:MFG_00000058 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Scion" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000059
-:MFG_00000059 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Smart" .
+ccx:MFG_00000059 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Smart" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000060
-:MFG_00000060 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Subaru" .
+ccx:MFG_00000060 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Subaru" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000061
-:MFG_00000061 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Suzuki" .
+ccx:MFG_00000061 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Suzuki" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000062
-:MFG_00000062 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Tesla" .
+ccx:MFG_00000062 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Tesla" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000063
-:MFG_00000063 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Toyota" .
+ccx:MFG_00000063 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Toyota" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000064
-:MFG_00000064 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "VinFast" .
+ccx:MFG_00000064 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "VinFast" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000065
-:MFG_00000065 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Volkswagen" .
+ccx:MFG_00000065 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Volkswagen" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000066
-:MFG_00000066 rdf:type owl:NamedIndividual ,
-                       cco:IncorporatedOrganization ;
-              rdfs:label "Volvo" .
+ccx:MFG_00000066 rdf:type owl:NamedIndividual ,
+                          cco:IncorporatedOrganization ;
+                 rdfs:label "Volvo" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/MFG_00000070
-:MFG_00000070 rdf:type owl:NamedIndividual ,
-                       :MFG_00000002 ;
-              rdfs:label "Honda Accord Artifact Model" .
+ccx:MFG_00000070 rdf:type owl:NamedIndividual ,
+                          ccx:MFG_00000002 ;
+                 rdfs:label "Honda Accord Artifact Model" .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/ProductionAct1
-:ProductionAct1 rdf:type owl:NamedIndividual ,
-                         cco:ActOfManufacturing ;
-                cco:has_agent :MFG_00000023 ;
-                cco:has_input :Civic ;
-                cco:has_output :Car1 .
+ccx:ProductionAct1 rdf:type owl:NamedIndividual ,
+                            cco:ActOfManufacturing ;
+                   cco:has_agent ccx:MFG_00000023 ;
+                   cco:has_input ccx:Civic ;
+                   cco:has_output ccx:Car1 .
 
 
 ###  http://www.CommonCoreExtension.org/ontologies/CoreExtension/car
-:car rdf:type owl:NamedIndividual ,
-              cco:Automobile ;
-     :MFG_00000068 :MFG_00000023 ;
-     :MFG_00000069 1998 .
+ccx:car rdf:type owl:NamedIndividual ,
+                 cco:Automobile ;
+        ccx:MFG_00000068 ccx:MFG_00000023 ;
+        ccx:MFG_00000069 1998 .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
